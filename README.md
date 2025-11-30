@@ -60,13 +60,21 @@ This updates the local copy and prevents conflicts.
 
 🔥 Summary (Most Important)
 
-Always remember:
-# Before work:
+# 1. למשוך עדכונים לפני עבודה
 git pull
 
-# After work:
+# 2. לעבוד, לשנות קבצים...
+
+# 3. לבדוק מה השתנה
+git status
+
+# 4. להוסיף לקומיט
 git add .
-git commit -m "update"
+
+# 5. ליצור קומיט
+git commit -m "Project 3 - Q1 and TB"
+
+# 6. לדחוף ל-GitHub
 git push
 
 Following this simple cycle ensures zero conflicts and keeps both environments perfectly in sync.
