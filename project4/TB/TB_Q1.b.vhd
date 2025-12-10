@@ -2,12 +2,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.ALL;
 
-entity TB_Mux4x1_signal is
-end TB_Mux4x1_signal;
+entity TB_Mux4x1_Variable is
+end TB_Mux4x1_Variable;
 
-architecture B1 of TB_Mux4x1_signal is
+architecture B2 of TB_Mux4x1_Variable is
 
-    component Mux4x1_signal is
+    component Mux4x1_Variable is
         port (
             A  : in  STD_LOGIC;
             B  : in  STD_LOGIC;
@@ -19,14 +19,13 @@ architecture B1 of TB_Mux4x1_signal is
         );
     end component;
 
-    signal A, B        : STD_LOGIC := '0';
-    signal I0, I1, I2,
-           I3          : STD_LOGIC := '0';
-    signal Q           : STD_LOGIC := '0';
+    signal A, B               : STD_LOGIC := '0';
+    signal I0, I1, I2,I3      : STD_LOGIC := '0';
+    signal Q                  : STD_LOGIC := '0';
 
 begin
 
-    UUT : Mux4x1_signal
+    UUT1 : Mux4x1_Variable
         port map (
             A  => A,
             B  => B,
@@ -52,4 +51,4 @@ begin
         wait;
     end process;
 
-end B1;
+end B2;

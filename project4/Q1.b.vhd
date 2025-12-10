@@ -15,6 +15,7 @@ entity Mux4x1_Variable is
 end Mux4x1_Variable;
 
 architecture Behavioral of Mux4x1_Variable is
+    signal SEL_test : INTEGER range 0  to 3;
 begin
     PROCESS (A, B, I0, I1, I2, I3)
 
@@ -31,6 +32,8 @@ begin
         if (A = '1') then
             sel := sel + 2;
         end if;
+
+        SEL_test<=sel;
 
 
         case sel is
