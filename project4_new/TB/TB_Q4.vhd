@@ -1,12 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity TB_A_Q3 is
-end TB_A_Q3;
+entity TB_Q4 is
+end TB_Q4;
 
-architecture Behavioral of TB_A_Q3 is
+architecture Behavioral of TB_Q4 is
 
-    component A_Q3 is
+    component Q4 is
         port(
             a, b, c : in  bit;
             y       : out bit
@@ -20,7 +20,7 @@ architecture Behavioral of TB_A_Q3 is
 
 begin
 
-    UUT : A_Q3
+    UUT : Q4
         port map(
             a => a,
             b => b,
@@ -30,13 +30,22 @@ begin
 
     process
     begin
+        -- t = 0 ns
         a <= '0'; b <= '0'; c <= '0'; wait for 10 ns;
+        -- t = 10 ns
         a <= '0'; b <= '0'; c <= '1'; wait for 10 ns;
-        a <= '0'; b <= '1'; c <= '1'; wait for 10 ns;
-        a <= '1'; b <= '1'; c <= '0'; wait for 10 ns;
-        a <= '1'; b <= '0'; c <= '0'; wait for 10 ns;
-        a <= '1'; b <= '1'; c <= '1'; wait for 10 ns;
+        -- t = 20 ns
         a <= '0'; b <= '1'; c <= '0'; wait for 10 ns;
+        -- t = 30 ns
+        a <= '0'; b <= '1'; c <= '1'; wait for 10 ns;
+        -- t = 40 ns
+        a <= '1'; b <= '0'; c <= '0'; wait for 10 ns;
+        -- t = 50 ns
+        a <= '1'; b <= '0'; c <= '1'; wait for 10 ns;
+        -- t = 60 ns
+        a <= '1'; b <= '1'; c <= '0'; wait for 10 ns;
+        -- t = 70 ns
+        a <= '1'; b <= '1'; c <= '1'; wait for 10 ns;
 
         wait;
     end process;

@@ -41,6 +41,7 @@ begin
 
     process
     begin
+        wait for 10 ns;
         I0 <= '0'; I1 <= '1'; I2 <= '0'; I3 <= '1';
 
         A <= '0'; B <= '0'; wait for 20 ns;
