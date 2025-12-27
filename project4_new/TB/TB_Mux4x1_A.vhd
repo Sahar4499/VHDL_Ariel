@@ -43,14 +43,12 @@ begin
     begin
         wait for 10 ns;
         I0 <= '0'; I1 <= '1'; I2 <= '0'; I3 <= '1';
-
         A <= '0'; B <= '0'; wait for 20 ns;
         A <= '0'; B <= '1'; wait for 20 ns;
         A <= '1'; B <= '0'; wait for 20 ns;
         A <= '1'; B <= '1'; wait for 20 ns;
 
         I0 <= '1'; I1 <= '0'; I2 <= '1'; I3 <= '0';
-
         A <= '0'; B <= '0'; wait for 20 ns;
         A <= '0'; B <= '1'; wait for 20 ns;
         A <= '1'; B <= '0'; wait for 20 ns;
