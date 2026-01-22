@@ -46,7 +46,7 @@ begin
             when "00"   => B(0) <= '1';   -- B0
             when "01"   => B(1) <= '1';   -- B1
             when "10"   => B(2) <= '1';   -- B2
-            when others => B    <= (others='0');   
+            when others => B    <= "0000";   
         end case;
     end process;
 
