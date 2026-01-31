@@ -12,18 +12,14 @@ end Q1;
 
 architecture Behavioral of Q1 is
 begin
-
     process (A)
     begin
         if (A > 10) then
             Y <= "0001";
-
         elsif (A < 5) then
             Y <= "0000";
-
         else
             Y <= std_logic_vector(to_unsigned(A, 4));
         end if;
     end process;
-
 end Behavioral;

@@ -12,7 +12,7 @@ end Q1;
 
 architecture Behavioral of Q1 is
 
-    signal counter, complement, near, multi : std_logic_vector(7 downto 0);
+    signal counter, complement, near, multi : std_logic_vector(7 downto 0):=(others='0');
 
 begin
 

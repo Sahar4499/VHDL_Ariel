@@ -22,7 +22,6 @@ begin
                 tmp := tmp or X(3);
             end if;
         end loop;
-
         Y <= tmp;
     end process;
 
